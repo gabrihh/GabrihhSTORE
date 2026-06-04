@@ -13,8 +13,11 @@
         item.classList.add("item");
         document.querySelector(".container").appendChild(item);
         item.innerHTML = template.innerHTML;
-        item.querySelector("img").src = obj.image;
-        item.querySelector("p").innerText = key;
+        const img = item.querySelector("img");
+		img.src = obj.image;
+		img.referrerpolicy = "no-referrer";
+        img.crossorigin = "anonymous";
+        item.querySelector("p").textContent = key;
         item.querySelector("button").onclick = () => {
         	window.open(obj.url, "_blank");
         };

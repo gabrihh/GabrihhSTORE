@@ -26,7 +26,7 @@
        template.remove();
        
   })
-  .catch(error => console.error('Erro ao carregar JSON:', error));
+  .catch(error => console.error('Error:', error));
   
   const search = document.querySelector("input");
   
